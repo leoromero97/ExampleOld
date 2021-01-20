@@ -1,0 +1,277 @@
+#banner {
+  background-color: #ffe66d;
+}
+
+/*ACA EMPIEZAN LOS ESTILOS DEL TITULO DEL BANNER*/
+.titleBanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 16vh;
+}
+
+.titleBanner h1 {
+  font-size: 4.5vh;
+  animation: appear3 1s ease-in;
+}
+
+/*ACA EMPIEZA EL ESTILO DEL CONTENEDOR DE LAS DIAPOSITVAS*/
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/*ACA EMPIEZA EL ESTILO DA CADA DIAPOSITIVA*/
+.slide {
+  background-color: #ffe66d;
+  height: 60vh;
+  width: 100%;
+  border: solid 1px black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: white;
+}
+
+.slide:nth-child(2) {
+  background-color: #4ecdc4;
+  color: black;
+  justify-content: space-evenly;
+}
+
+.slide:nth-child(3) {
+  background-color: #1a535c;
+}
+
+/*ACA EMPIEZAN LOS ESTILOS PARA LA DIAPOSTIVA CON TEXTO*/
+.slideTitle {
+  width: 100%;
+  height: 30%;
+}
+
+.slideTitle h2 {
+  padding-left: 12%;
+  font-size: 4.2vh;
+}
+
+.slideText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 60%;
+}
+
+.slideText p {
+  font-size: 2.6vh;
+  padding-left: 12%;
+}
+
+/*ACA EMPIEZAN LOS ESTILOS DE LAS DIAPOSITVAS CON IMAGENES*/
+.slideImg {
+  justify-content: space-evenly;
+}
+
+.containerImg,
+.slideText2 {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.containerImg {
+  padding-top: 2%;
+}
+
+.slideText2 {
+  padding-bottom: 16%;
+}
+
+.slideText2 p {
+  text-align: center;
+  font-size: 2.6vh;
+  width: 20%;
+}
+
+.img {
+  height: 70%;
+}
+
+/*ACA EMPIEZAN LOS ESTILOS PARA LOS BOTONES FLECHA/SIGUIENTE/ATRAS*/
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-size: 5vh;
+  font-weight: bold;
+  transition: .6s ease;
+  border-radius: 0 3px 3px 0
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 3px 3px 3px
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 3px 3px 3px
+}
+
+.prev:hover,
+.next:hover {
+  font-size: 6vh;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color .6s ease
+}
+
+.activeDot,
+.dot:hover {
+  background-color: #717171
+}
+
+/*ACA EMPIEZA EL CONTENDOR DE LOS BOTONES*/
+.containerButtonBanner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 18vh;
+  width: 100%;
+}
+
+.buttonBanner {
+  background-color: #ffe66d;
+  border: 3px solid #f7fff7;
+  border-radius: 1vh;
+  color: black;
+  display: inline-block;
+  font-size: 2vh;
+  font-weight: bold;
+  min-height: 3vh;
+  padding: 2vh;
+  text-decoration: none;
+  text-align: center;
+  min-width: 30vh;
+  -webkit-animation: appear3 1s ease-in;
+  animation: appear3 1s ease-in;
+  outline: none;
+  padding: 2vh;
+  -webkit-border-radius: 1vh;
+  -moz-border-radius: 1vh;
+  -ms-border-radius: 1vh;
+  -o-border-radius: 1vh;
+}
+
+.buttonBanner:hover {
+  background-color: #4ecdc4;
+}
+
+@media screen and (max-width:950px) {
+
+  .slideTitle,
+  .slideText {
+    justify-content: start;
+    padding-left: 2%;
+  }
+
+  .slideText p,
+  .slideText2 p {
+    font-size: 2vh;
+  }
+
+  .containerButtonBanner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .buttonBanner {
+    margin-bottom: 1vh;
+    min-height: 30px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .slideText2 p {
+    width: 30%;
+  }
+
+  .img {
+    height: 30%;
+  }
+
+  .containerButtonBanner {
+    height: 20vh;
+  }
+
+  .buttonBanner {
+    border: 2px solid #f7fff7;
+    font-size: 1.4vh;
+    height: 4.3vh;
+    width: 20vh;
+    padding: 1.1vh;
+    min-width: 22vh;
+  }
+}
+
+@media screen and (max-width:300px) {
+  .titleBanner h1 {
+    font-size: 2.5vh;
+  }
+
+  .slideTitle h2 {
+    font-size: 2.1vh;
+  }
+
+  .slideImg,
+  .slide {
+    height: 300px;
+    justify-content: none;
+  }
+
+  .slideText p,
+  .slideText2 p {
+    font-size: 1.3vh;
+  }
+
+  .img {
+    height: 20%;
+  }
+
+  .containerButtonBanner {
+    height: 12vh;
+  }
+
+  .buttonBanner {
+    width: 30%;
+    font-size: 0.5vh;
+    min-height: 1vh;
+    min-width: 8vh;
+    padding: 1vh;
+  }
+}
